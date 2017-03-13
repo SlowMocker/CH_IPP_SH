@@ -20,15 +20,35 @@ CH_SINGLETON_M(UCManager)
     [CHUserCenter loginWithUsername:phone password:password macAddress:nil deviceSn:nil complete:^(CHUCResponseInfo *info) {
         if (info.ok) { // login success
             CHLog(@"登陆成功 [用户云]");
-            CHUserInfo *userInfo = [[CHUserInfo alloc]initWithDic:info.JSONObject];
-            CHLog(@"返回数据 [用户云]:\n%@\n转换成 CHUserInfo :\n%@\n\n\n",info.JSONObject,[userInfo toDictionary]);
+            NSString *token = [info.JSONObject objectForKey:@"token"];
+            CHLog(@"返回数据 [用户云]:\n%@",info.JSONObject);
             if (success) {
-                success(userInfo);
+                [CHUserCenter getUserInfoWithComplete:^(CHUCResponseInfo *info) {
+                    if (info.ok) {
+                        CHUserInfo *userInfo = [[CHUserInfo alloc]initWithDic:info.JSONObject];
+                        userInfo.token = token;
+                        userInfo.password = password;
+                        CHLog(@"返回数据 [用户云]:\n%@\n转换成 CHUserInfo :\n%@\n\n\n",info.JSONObject,[userInfo toDictionary]);
+                        if (!userInfo.nickname) {
+                            // 如果用户没有设置 nickname ，默认将电话号码设为 nickname
+                            userInfo.nickname = userInfo.phoneNum;
+                        }
+                        if (success) {
+                            success(userInfo);
+                        }
+                    }
+                    else {
+                        CHLog(@"获取用户信息失败 [用户云]");
+                        if (fail) {
+                            fail(@"获取用户信息失败");
+                        }
+                    }
+                }];
             }
         }
         else { // login fail
+            CHLog(@"登陆失败 [用户云]");
             if (fail) {
-                CHLog(@"登陆失败 [用户云]");
                 fail(@"登陆用户云失败");
             }
         }

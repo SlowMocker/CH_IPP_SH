@@ -52,6 +52,7 @@
 		6037A4D21E768B6D0052804F /* CHUserInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHUserInfo.m; sourceTree = "<group>"; };
 		6037A4D51E768EA80052804F /* CHBaseModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHBaseModel.h; sourceTree = "<group>"; };
 		6037A4D61E768EA80052804F /* CHBaseModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHBaseModel.m; sourceTree = "<group>"; };
+		6037A4D81E769FDE0052804F /* CHConst.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CHConst.h; sourceTree = "<group>"; };
 		D88A51B20918C8030D44A6C8 /* libPods-CH_IPP_SH_SDK.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-CH_IPP_SH_SDK.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F248D0C45552DB9CC90D6E47 /* Pods-CH_IPP_SH_SDK.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CH_IPP_SH_SDK.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CH_IPP_SH_SDK/Pods-CH_IPP_SH_SDK.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -112,6 +113,7 @@
 			children = (
 				6037A44B1E766D9B0052804F /* main.m */,
 				6037A4611E766FD90052804F /* CHIPP_SH_SDK.pch */,
+				6037A4D81E769FDE0052804F /* CHConst.h */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
