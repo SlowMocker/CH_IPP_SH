@@ -1,0 +1,4 @@
+platform :ios , 8.0 
+target ‘CH_IPP_SH_SDK’ do
+
+end

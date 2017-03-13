@@ -13,9 +13,11 @@
 		6037A4551E766D9B0052804F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6037A4531E766D9B0052804F /* Main.storyboard */; };
 		6037A4571E766D9B0052804F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6037A4561E766D9B0052804F /* Assets.xcassets */; };
 		6037A45A1E766D9B0052804F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6037A4581E766D9B0052804F /* LaunchScreen.storyboard */; };
+		FB90478D626FEB2A03E3076C /* libPods-CH_IPP_SH_SDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D88A51B20918C8030D44A6C8 /* libPods-CH_IPP_SH_SDK.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3BC005B639832135973F9EE6 /* Pods-CH_IPP_SH_SDK.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CH_IPP_SH_SDK.release.xcconfig"; path = "Pods/Target Support Files/Pods-CH_IPP_SH_SDK/Pods-CH_IPP_SH_SDK.release.xcconfig"; sourceTree = "<group>"; };
 		6037A4471E766D9B0052804F /* CH_IPP_SH_SDK.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CH_IPP_SH_SDK.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6037A44B1E766D9B0052804F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		6037A44D1E766D9B0052804F /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -26,6 +28,8 @@
 		6037A4561E766D9B0052804F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6037A4591E766D9B0052804F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6037A45B1E766D9B0052804F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D88A51B20918C8030D44A6C8 /* libPods-CH_IPP_SH_SDK.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-CH_IPP_SH_SDK.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F248D0C45552DB9CC90D6E47 /* Pods-CH_IPP_SH_SDK.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CH_IPP_SH_SDK.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CH_IPP_SH_SDK/Pods-CH_IPP_SH_SDK.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,6 +37,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FB90478D626FEB2A03E3076C /* libPods-CH_IPP_SH_SDK.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -44,6 +49,8 @@
 			children = (
 				6037A4491E766D9B0052804F /* CH_IPP_SH_SDK */,
 				6037A4481E766D9B0052804F /* Products */,
+				69395AA79B5C9DA0C6D046DA /* Pods */,
+				B0857DA41B3334FFFAE18357 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -79,6 +86,23 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		69395AA79B5C9DA0C6D046DA /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				F248D0C45552DB9CC90D6E47 /* Pods-CH_IPP_SH_SDK.debug.xcconfig */,
+				3BC005B639832135973F9EE6 /* Pods-CH_IPP_SH_SDK.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		B0857DA41B3334FFFAE18357 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D88A51B20918C8030D44A6C8 /* libPods-CH_IPP_SH_SDK.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -86,9 +110,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 6037A45E1E766D9B0052804F /* Build configuration list for PBXNativeTarget "CH_IPP_SH_SDK" */;
 			buildPhases = (
+				9EE810ED26CE1425D53DB375 /* [CP] Check Pods Manifest.lock */,
 				6037A4431E766D9B0052804F /* Sources */,
 				6037A4441E766D9B0052804F /* Frameworks */,
 				6037A4451E766D9B0052804F /* Resources */,
+				FC9356FEF4E1DEE54FDC732D /* [CP] Embed Pods Frameworks */,
+				325175F273670A26A0FCA12D /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -143,6 +170,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		325175F273670A26A0FCA12D /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CH_IPP_SH_SDK/Pods-CH_IPP_SH_SDK-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9EE810ED26CE1425D53DB375 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		FC9356FEF4E1DEE54FDC732D /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CH_IPP_SH_SDK/Pods-CH_IPP_SH_SDK-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		6037A4431E766D9B0052804F /* Sources */ = {
@@ -263,6 +338,7 @@
 		};
 		6037A45F1E766D9B0052804F /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F248D0C45552DB9CC90D6E47 /* Pods-CH_IPP_SH_SDK.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = CH_IPP_SH_SDK/Info.plist;
@@ -274,6 +350,7 @@
 		};
 		6037A4601E766D9B0052804F /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3BC005B639832135973F9EE6 /* Pods-CH_IPP_SH_SDK.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = CH_IPP_SH_SDK/Info.plist;
@@ -302,6 +379,7 @@
 				6037A4601E766D9B0052804F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
