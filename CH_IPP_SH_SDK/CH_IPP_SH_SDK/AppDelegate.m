@@ -10,6 +10,8 @@
 
 #import <CHUserCenter/CHUserCenter.h>
 
+#import "CHLoginViewController.h"
+
 @interface AppDelegate ()
 
 @end
@@ -23,6 +25,15 @@
     
     // 配置用户云
     [[CHUserCenterManager sharedInstance] startWithAppKey:@"3aca93d4" secertKey: @"9aecd01536324ebcb5267066aa656721" scenes: CHUCScenesOfficial];
+    
+    CHLoginViewController *loginVc = [[CHLoginViewController alloc]initWithNibName:@"CHLoginViewController" bundle:nil];
+    UINavigationController *nav = [[UINavigationController alloc]initWithRootViewController:loginVc];
+    
+    UIWindow *window = [[UIWindow alloc]initWithFrame:[[UIScreen mainScreen] bounds]];
+    self.window = window;
+    [window makeKeyAndVisible];
+    window.backgroundColor = [UIColor whiteColor];
+    window.rootViewController = nav;
     
     return YES;
 }

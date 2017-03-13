@@ -7,6 +7,7 @@
 //
 
 #import "CHLoginViewController.h"
+#import "CHUserCloudManager.h"
 
 @interface CHLoginViewController ()
 
@@ -22,6 +23,13 @@
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+- (IBAction)login:(id)sender {
+    [[CHUserCloudManager defaultUCManager] loginWithPhoneNum:@"15208260885" password:@"123456789." success:^(CHUserInfo *userInfo) {
+        
+    } fail:^(NSString *dialog) {
+        
+    }];
 }
 
 /*
