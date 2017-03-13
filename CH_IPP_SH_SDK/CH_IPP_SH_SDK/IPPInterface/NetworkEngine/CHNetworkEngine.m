@@ -34,7 +34,7 @@
     return manager;
 }
 
-+ (void) afRequestDataWithUrlstr:(NSString *)urlStr paramDic:(NSDictionary *)dic success:(void(^)(id respose))success fail:(void(^)(NSString *dialog))fail {
++ (void) af_PostRequestWithUrlStr:(NSString *)urlStr paramDic:(NSDictionary *)dic success:(void(^)(id respose))success fail:(void(^)(NSString *dialog))fail {
     // 网络检查
     AFNetworkReachabilityManager *reachabilityManager = [AFNetworkReachabilityManager sharedManager];
     if (reachabilityManager.networkReachabilityStatus == AFNetworkReachabilityStatusNotReachable) {

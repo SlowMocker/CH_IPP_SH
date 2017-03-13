@@ -1,0 +1,17 @@
+CHUserCloudManager :
+云: 长虹统一用户云（实际使用 CHUserCener SDK）
+职责: 负责用户登陆、注册、找回密码
+
+
+CHBusinessCloudManager :
+云: 长虹业务云（云端用户信息（设备）存储）
+职责: 存储用户信息、绑定分享设备信息等
+
+
+CHDeviceCloudManager :
+云: 长虹设备云（实际使用 IPP SDK）
+职责: 绑定设备、获取和发现设备
+
+
+CHNetworkEngine :
+职责: 封装 AFNetworking 进行网络请求。提供各种网络请求模版，目前使用 POST

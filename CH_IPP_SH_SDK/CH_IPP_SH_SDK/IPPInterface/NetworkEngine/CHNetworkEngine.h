@@ -12,13 +12,13 @@
 @interface CHNetworkEngine : NSObject
 
 /**
- *  POST
+ *  采用 Post 进行网络请求
  *
- *  @param urlStr  url string
- *  @param dic     param dictionary
- *  @param success success block
- *  @param fail    fail block
+ *  @param urlStr  请求地址字符串
+ *  @param dic     参数字典
+ *  @param success 成功回调
+ *  @param fail    失败回调
  */
-+ (void) afRequestDataWithUrlstr:(NSString *)urlStr paramDic:(NSDictionary *)dic success:(void(^)(id respose))success fail:(void(^)(NSString *dialog))fail;
++ (void) af_PostRequestWithUrlStr:(NSString *)urlStr paramDic:(NSDictionary *)dic success:(void(^)(id respose))success fail:(void(^)(NSString *dialog))fail;
 
 @end

@@ -18,6 +18,7 @@
 		6037A4AA1E767FA00052804F /* CHBusinessCloudManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 6037A4A61E767FA00052804F /* CHBusinessCloudManager.m */; };
 		6037A4AB1E767FA00052804F /* CHDeviceCloudManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 6037A4A91E767FA00052804F /* CHDeviceCloudManager.m */; };
 		6037A4CC1E7682B30052804F /* CHUserCloudManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 6037A4CB1E7682B30052804F /* CHUserCloudManager.m */; };
+		6037A4CE1E7685090052804F /* 开发文档 in Resources */ = {isa = PBXBuildFile; fileRef = 6037A4CD1E7685090052804F /* 开发文档 */; };
 		FB90478D626FEB2A03E3076C /* libPods-CH_IPP_SH_SDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D88A51B20918C8030D44A6C8 /* libPods-CH_IPP_SH_SDK.a */; };
 /* End PBXBuildFile section */
 
@@ -44,6 +45,7 @@
 		6037A4A91E767FA00052804F /* CHDeviceCloudManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHDeviceCloudManager.m; sourceTree = "<group>"; };
 		6037A4CA1E7682B30052804F /* CHUserCloudManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHUserCloudManager.h; sourceTree = "<group>"; };
 		6037A4CB1E7682B30052804F /* CHUserCloudManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHUserCloudManager.m; sourceTree = "<group>"; };
+		6037A4CD1E7685090052804F /* 开发文档 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "开发文档"; sourceTree = "<group>"; };
 		D88A51B20918C8030D44A6C8 /* libPods-CH_IPP_SH_SDK.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-CH_IPP_SH_SDK.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F248D0C45552DB9CC90D6E47 /* Pods-CH_IPP_SH_SDK.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CH_IPP_SH_SDK.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CH_IPP_SH_SDK/Pods-CH_IPP_SH_SDK.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -93,6 +95,7 @@
 				6037A4581E766D9B0052804F /* LaunchScreen.storyboard */,
 				6037A45B1E766D9B0052804F /* Info.plist */,
 				6037A44A1E766D9B0052804F /* Supporting Files */,
+				6037A4CD1E7685090052804F /* 开发文档 */,
 			);
 			path = CH_IPP_SH_SDK;
 			sourceTree = "<group>";
@@ -242,6 +245,7 @@
 				6037A45A1E766D9B0052804F /* LaunchScreen.storyboard in Resources */,
 				6037A4571E766D9B0052804F /* Assets.xcassets in Resources */,
 				6037A4551E766D9B0052804F /* Main.storyboard in Resources */,
+				6037A4CE1E7685090052804F /* 开发文档 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
