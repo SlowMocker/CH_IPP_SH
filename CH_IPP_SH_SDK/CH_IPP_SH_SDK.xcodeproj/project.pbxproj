@@ -13,6 +13,7 @@
 		6037A4551E766D9B0052804F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6037A4531E766D9B0052804F /* Main.storyboard */; };
 		6037A4571E766D9B0052804F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6037A4561E766D9B0052804F /* Assets.xcassets */; };
 		6037A45A1E766D9B0052804F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6037A4581E766D9B0052804F /* LaunchScreen.storyboard */; };
+		6037A4651E7670780052804F /* NSString+ChEx.m in Sources */ = {isa = PBXBuildFile; fileRef = 6037A4641E7670780052804F /* NSString+ChEx.m */; };
 		FB90478D626FEB2A03E3076C /* libPods-CH_IPP_SH_SDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D88A51B20918C8030D44A6C8 /* libPods-CH_IPP_SH_SDK.a */; };
 /* End PBXBuildFile section */
 
@@ -28,6 +29,9 @@
 		6037A4561E766D9B0052804F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6037A4591E766D9B0052804F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6037A45B1E766D9B0052804F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6037A4611E766FD90052804F /* CHIPP_SH_SDK.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CHIPP_SH_SDK.pch; sourceTree = "<group>"; };
+		6037A4631E7670780052804F /* NSString+ChEx.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+ChEx.h"; sourceTree = "<group>"; };
+		6037A4641E7670780052804F /* NSString+ChEx.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+ChEx.m"; sourceTree = "<group>"; };
 		D88A51B20918C8030D44A6C8 /* libPods-CH_IPP_SH_SDK.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-CH_IPP_SH_SDK.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F248D0C45552DB9CC90D6E47 /* Pods-CH_IPP_SH_SDK.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CH_IPP_SH_SDK.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CH_IPP_SH_SDK/Pods-CH_IPP_SH_SDK.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -65,6 +69,7 @@
 		6037A4491E766D9B0052804F /* CH_IPP_SH_SDK */ = {
 			isa = PBXGroup;
 			children = (
+				6037A4621E7670780052804F /* Category */,
 				6037A44D1E766D9B0052804F /* AppDelegate.h */,
 				6037A44E1E766D9B0052804F /* AppDelegate.m */,
 				6037A4501E766D9B0052804F /* ViewController.h */,
@@ -82,8 +87,18 @@
 			isa = PBXGroup;
 			children = (
 				6037A44B1E766D9B0052804F /* main.m */,
+				6037A4611E766FD90052804F /* CHIPP_SH_SDK.pch */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		6037A4621E7670780052804F /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				6037A4631E7670780052804F /* NSString+ChEx.h */,
+				6037A4641E7670780052804F /* NSString+ChEx.m */,
+			);
+			path = Category;
 			sourceTree = "<group>";
 		};
 		69395AA79B5C9DA0C6D046DA /* Pods */ = {
@@ -225,6 +240,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6037A4521E766D9B0052804F /* ViewController.m in Sources */,
+				6037A4651E7670780052804F /* NSString+ChEx.m in Sources */,
 				6037A44F1E766D9B0052804F /* AppDelegate.m in Sources */,
 				6037A44C1E766D9B0052804F /* main.m in Sources */,
 			);
@@ -341,6 +357,8 @@
 			baseConfigurationReference = F248D0C45552DB9CC90D6E47 /* Pods-CH_IPP_SH_SDK.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(PROJECT_DIR)/CH_IPP_SH_SDK/CHIPP_SH_SDK.pch";
 				INFOPLIST_FILE = CH_IPP_SH_SDK/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.W.CH-IPP-SH-SDK";
@@ -353,6 +371,8 @@
 			baseConfigurationReference = 3BC005B639832135973F9EE6 /* Pods-CH_IPP_SH_SDK.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(PROJECT_DIR)/CH_IPP_SH_SDK/CHIPP_SH_SDK.pch";
 				INFOPLIST_FILE = CH_IPP_SH_SDK/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.W.CH-IPP-SH-SDK";
