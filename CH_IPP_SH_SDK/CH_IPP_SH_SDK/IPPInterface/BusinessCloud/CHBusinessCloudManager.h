@@ -1,5 +1,5 @@
 //
-//  CHDeviceCloudInterface.h
+//  CHBusinessCloudInterface.h
 //  CH_IPP_SH_SDK
 //
 //  Created by Wu on 17/3/13.
@@ -8,8 +8,8 @@
 
 #import <Foundation/Foundation.h>
 
-@interface CHDeviceCloudInterface : NSObject
+@interface CHBusinessCloudManager : NSObject
 
-CH_SINGLETON_H(DCManager)
+CH_SINGLETON_H(BCManager)
 
 @end

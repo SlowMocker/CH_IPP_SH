@@ -6,9 +6,9 @@
 //  Copyright © 2017年 Wu. All rights reserved.
 //
 
-#import "CHBusinessCloudInterface.h"
+#import "CHBusinessCloudManager.h"
 
-@implementation CHBusinessCloudInterface
+@implementation CHBusinessCloudManager
 
 CH_SINGLETON_M(BCManager)
 

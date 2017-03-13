@@ -6,9 +6,9 @@
 //  Copyright © 2017年 Wu. All rights reserved.
 //
 
-#import "CHDeviceCloudInterface.h"
+#import "CHDeviceCloudManager.h"
 
-@implementation CHDeviceCloudInterface
+@implementation CHDeviceCloudManager
 
 CH_SINGLETON_M(DCManager)
 
