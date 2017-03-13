@@ -8,6 +8,8 @@
 
 #import "ViewController.h"
 
+#import "CHUserCloudManager.h"
+
 @interface ViewController ()
 
 @end
@@ -18,9 +20,11 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
     
-    if(CH_IS_IPHONE) NSLog(@"hhh");
-    
-    ;
+    [[CHUserCloudManager defaultUCManager] loginWithPhoneNum:@"15208260885" password:@"123456789." success:^(CHUserInfo *userInfo) {
+        
+    } fail:^(NSString *dialog) {
+        
+    }];
 }
 
 - (void)didReceiveMemoryWarning {

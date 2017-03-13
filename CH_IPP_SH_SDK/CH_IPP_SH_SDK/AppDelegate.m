@@ -8,6 +8,8 @@
 
 #import "AppDelegate.h"
 
+#import <CHUserCenter/CHUserCenter.h>
+
 @interface AppDelegate ()
 
 @end
@@ -17,6 +19,11 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    
+    
+    // 配置用户云
+    [[CHUserCenterManager sharedInstance] startWithAppKey:@"3aca93d4" secertKey: @"9aecd01536324ebcb5267066aa656721" scenes: CHUCScenesOfficial];
+    
     return YES;
 }
 
