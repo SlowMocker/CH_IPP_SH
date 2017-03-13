@@ -10,4 +10,6 @@
 
 @interface CHBusinessCloudInterface : NSObject
 
+CH_SINGLETON_H(BCManager)
+
 @end

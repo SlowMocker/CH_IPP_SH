@@ -10,4 +10,6 @@
 
 @implementation CHBusinessCloudInterface
 
+CH_SINGLETON_M(BCManager)
+
 @end

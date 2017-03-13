@@ -16,6 +16,7 @@
 		6037A4651E7670780052804F /* NSString+ChEx.m in Sources */ = {isa = PBXBuildFile; fileRef = 6037A4641E7670780052804F /* NSString+ChEx.m */; };
 		6037A4691E7676C90052804F /* CHBusinessCloudInterface.m in Sources */ = {isa = PBXBuildFile; fileRef = 6037A4681E7676C90052804F /* CHBusinessCloudInterface.m */; };
 		6037A46C1E7676ED0052804F /* CHBusinessCloudInterface+Device.m in Sources */ = {isa = PBXBuildFile; fileRef = 6037A46B1E7676ED0052804F /* CHBusinessCloudInterface+Device.m */; };
+		6037A4731E767D010052804F /* CHNetworkEngine.m in Sources */ = {isa = PBXBuildFile; fileRef = 6037A4721E767D010052804F /* CHNetworkEngine.m */; };
 		FB90478D626FEB2A03E3076C /* libPods-CH_IPP_SH_SDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D88A51B20918C8030D44A6C8 /* libPods-CH_IPP_SH_SDK.a */; };
 /* End PBXBuildFile section */
 
@@ -38,6 +39,8 @@
 		6037A4681E7676C90052804F /* CHBusinessCloudInterface.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHBusinessCloudInterface.m; sourceTree = "<group>"; };
 		6037A46A1E7676ED0052804F /* CHBusinessCloudInterface+Device.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CHBusinessCloudInterface+Device.h"; sourceTree = "<group>"; };
 		6037A46B1E7676ED0052804F /* CHBusinessCloudInterface+Device.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CHBusinessCloudInterface+Device.m"; sourceTree = "<group>"; };
+		6037A4711E767D010052804F /* CHNetworkEngine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHNetworkEngine.h; sourceTree = "<group>"; };
+		6037A4721E767D010052804F /* CHNetworkEngine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHNetworkEngine.m; sourceTree = "<group>"; };
 		D88A51B20918C8030D44A6C8 /* libPods-CH_IPP_SH_SDK.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-CH_IPP_SH_SDK.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F248D0C45552DB9CC90D6E47 /* Pods-CH_IPP_SH_SDK.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CH_IPP_SH_SDK.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CH_IPP_SH_SDK/Pods-CH_IPP_SH_SDK.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -111,12 +114,22 @@
 		6037A4661E7676A00052804F /* IPPInterface */ = {
 			isa = PBXGroup;
 			children = (
+				6037A4701E767D010052804F /* NetworkEngine */,
 				6037A4671E7676C90052804F /* CHBusinessCloudInterface.h */,
 				6037A4681E7676C90052804F /* CHBusinessCloudInterface.m */,
 				6037A46A1E7676ED0052804F /* CHBusinessCloudInterface+Device.h */,
 				6037A46B1E7676ED0052804F /* CHBusinessCloudInterface+Device.m */,
 			);
 			path = IPPInterface;
+			sourceTree = "<group>";
+		};
+		6037A4701E767D010052804F /* NetworkEngine */ = {
+			isa = PBXGroup;
+			children = (
+				6037A4711E767D010052804F /* CHNetworkEngine.h */,
+				6037A4721E767D010052804F /* CHNetworkEngine.m */,
+			);
+			path = NetworkEngine;
 			sourceTree = "<group>";
 		};
 		69395AA79B5C9DA0C6D046DA /* Pods */ = {
@@ -261,6 +274,7 @@
 				6037A4521E766D9B0052804F /* ViewController.m in Sources */,
 				6037A46C1E7676ED0052804F /* CHBusinessCloudInterface+Device.m in Sources */,
 				6037A4651E7670780052804F /* NSString+ChEx.m in Sources */,
+				6037A4731E767D010052804F /* CHNetworkEngine.m in Sources */,
 				6037A44F1E766D9B0052804F /* AppDelegate.m in Sources */,
 				6037A44C1E766D9B0052804F /* main.m in Sources */,
 			);
