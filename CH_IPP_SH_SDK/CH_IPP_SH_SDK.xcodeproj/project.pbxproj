@@ -19,6 +19,8 @@
 		6037A4AB1E767FA00052804F /* CHDeviceCloudManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 6037A4A91E767FA00052804F /* CHDeviceCloudManager.m */; };
 		6037A4CC1E7682B30052804F /* CHUserCloudManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 6037A4CB1E7682B30052804F /* CHUserCloudManager.m */; };
 		6037A4CE1E7685090052804F /* 开发文档 in Resources */ = {isa = PBXBuildFile; fileRef = 6037A4CD1E7685090052804F /* 开发文档 */; };
+		6037A4D31E768B6D0052804F /* CHUserInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 6037A4D21E768B6D0052804F /* CHUserInfo.m */; };
+		6037A4D71E768EA80052804F /* CHBaseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 6037A4D61E768EA80052804F /* CHBaseModel.m */; };
 		FB90478D626FEB2A03E3076C /* libPods-CH_IPP_SH_SDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D88A51B20918C8030D44A6C8 /* libPods-CH_IPP_SH_SDK.a */; };
 /* End PBXBuildFile section */
 
@@ -46,6 +48,10 @@
 		6037A4CA1E7682B30052804F /* CHUserCloudManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHUserCloudManager.h; sourceTree = "<group>"; };
 		6037A4CB1E7682B30052804F /* CHUserCloudManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHUserCloudManager.m; sourceTree = "<group>"; };
 		6037A4CD1E7685090052804F /* 开发文档 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "开发文档"; sourceTree = "<group>"; };
+		6037A4D11E768B6D0052804F /* CHUserInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHUserInfo.h; sourceTree = "<group>"; };
+		6037A4D21E768B6D0052804F /* CHUserInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHUserInfo.m; sourceTree = "<group>"; };
+		6037A4D51E768EA80052804F /* CHBaseModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHBaseModel.h; sourceTree = "<group>"; };
+		6037A4D61E768EA80052804F /* CHBaseModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHBaseModel.m; sourceTree = "<group>"; };
 		D88A51B20918C8030D44A6C8 /* libPods-CH_IPP_SH_SDK.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-CH_IPP_SH_SDK.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F248D0C45552DB9CC90D6E47 /* Pods-CH_IPP_SH_SDK.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CH_IPP_SH_SDK.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CH_IPP_SH_SDK/Pods-CH_IPP_SH_SDK.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -83,6 +89,7 @@
 		6037A4491E766D9B0052804F /* CH_IPP_SH_SDK */ = {
 			isa = PBXGroup;
 			children = (
+				6037A4CF1E768B5C0052804F /* Model */,
 				6037A4AC1E7682390052804F /* UserInterface */,
 				6037A4661E7676A00052804F /* IPPInterface */,
 				6037A4621E7670780052804F /* Category */,
@@ -163,6 +170,33 @@
 			);
 			name = UserInterface;
 			path = UserCenterInterface;
+			sourceTree = "<group>";
+		};
+		6037A4CF1E768B5C0052804F /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				6037A4D41E768B9B0052804F /* Base */,
+				6037A4D01E768B5C0052804F /* User */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		6037A4D01E768B5C0052804F /* User */ = {
+			isa = PBXGroup;
+			children = (
+				6037A4D11E768B6D0052804F /* CHUserInfo.h */,
+				6037A4D21E768B6D0052804F /* CHUserInfo.m */,
+			);
+			path = User;
+			sourceTree = "<group>";
+		};
+		6037A4D41E768B9B0052804F /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				6037A4D51E768EA80052804F /* CHBaseModel.h */,
+				6037A4D61E768EA80052804F /* CHBaseModel.m */,
+			);
+			path = Base;
 			sourceTree = "<group>";
 		};
 		69395AA79B5C9DA0C6D046DA /* Pods */ = {
@@ -304,6 +338,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6037A4D31E768B6D0052804F /* CHUserInfo.m in Sources */,
 				6037A4521E766D9B0052804F /* ViewController.m in Sources */,
 				6037A4651E7670780052804F /* NSString+ChEx.m in Sources */,
 				6037A4AB1E767FA00052804F /* CHDeviceCloudManager.m in Sources */,
@@ -311,6 +346,7 @@
 				6037A4731E767D010052804F /* CHNetworkEngine.m in Sources */,
 				6037A44F1E766D9B0052804F /* AppDelegate.m in Sources */,
 				6037A4AA1E767FA00052804F /* CHBusinessCloudManager.m in Sources */,
+				6037A4D71E768EA80052804F /* CHBaseModel.m in Sources */,
 				6037A44C1E766D9B0052804F /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

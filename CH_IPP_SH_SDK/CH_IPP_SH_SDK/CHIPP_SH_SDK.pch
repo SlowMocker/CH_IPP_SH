@@ -12,6 +12,8 @@
 // Include any system framework and library headers here that should be included in all compilation units.
 // You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
 
+// 偏好设置
+#define CH_USERDEFAULT [NSUserDefaults standardUserDefaults]
 
 // 整个屏幕的宽高
 #define CH_SCREEN_WIDTH ([UIScreen mainScreen].bounds.size.width)
