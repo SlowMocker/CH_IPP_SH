@@ -8,5 +8,6 @@ target ‘CH_IPP_SH_SDK’ do
     pod 'Masonry'
     
     pod 'IPP3',             :git => 'https://git.oschina.net/changhongipp/AnFang.git'
+    pod 'CHUserCenter', 	:git => 'https://github.com/isunimp/CHUserCenter.git'
     
 end
