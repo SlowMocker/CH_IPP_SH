@@ -14,16 +14,31 @@ PODS:
   - AFNetworking/Serialization (3.1.0)
   - AFNetworking/UIKit (3.1.0):
     - AFNetworking/NSURLSession
+  - IPP3 (1.0.14b):
+    - OpenSSL-Universal
   - Masonry (1.0.2)
+  - OpenSSL-Universal (1.0.1.20)
 
 DEPENDENCIES:
   - AFNetworking (~> 3.0)
+  - IPP3 (from `https://git.oschina.net/changhongipp/AnFang.git`)
   - Masonry
+
+EXTERNAL SOURCES:
+  IPP3:
+    :git: https://git.oschina.net/changhongipp/AnFang.git
+
+CHECKOUT OPTIONS:
+  IPP3:
+    :commit: 57c9e259e2db64578d81ae6abf0d5bf47385a227
+    :git: https://git.oschina.net/changhongipp/AnFang.git
 
 SPEC CHECKSUMS:
   AFNetworking: 5e0e199f73d8626b11e79750991f5d173d1f8b67
+  IPP3: 3d9a97a6f482204d5f6b78fa4d6d82cfbbf85b43
   Masonry: 7c429b56da9d4ee0bbb3ed77a5ea710d6a5df39e
+  OpenSSL-Universal: 71f2c4b2ae758e2218090f905e95ca0ac5c01be7
 
-PODFILE CHECKSUM: 98863f9064a0736e457d0f7ceede16470761f93b
+PODFILE CHECKSUM: f4248c6e3856181486a60cedff1a512d22195ddd
 
 COCOAPODS: 1.0.1
