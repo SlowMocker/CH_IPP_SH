@@ -10,6 +10,10 @@
 #define CHConst_h
 
 static NSString *const  kUserNickname = @"ch_user_nickname";
+static NSString *const  kPhoneNum = @"ch_phone_num";
+static NSString *const  kPassword = @"ch_password";
+static NSString *const  kUserCloudToken = @"ch_userCloud_token";
+static NSString *const  kUserIconPath = @"ch_user_icon_path";
 
 
 #endif /* CHConst_h */
