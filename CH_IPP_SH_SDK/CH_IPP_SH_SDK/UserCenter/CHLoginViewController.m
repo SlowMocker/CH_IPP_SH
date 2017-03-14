@@ -8,6 +8,7 @@
 
 #import "CHLoginViewController.h"
 #import "CHUserCloudManager.h"
+#import <MBProgressHUD.h>
 
 @interface CHLoginViewController ()
 
