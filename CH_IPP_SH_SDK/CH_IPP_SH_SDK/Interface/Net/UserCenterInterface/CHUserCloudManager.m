@@ -47,7 +47,7 @@ CH_SINGLETON_M(UCManager)
             }
         }
         else { // login fail
-            CHLog(@"登陆失败 [用户云]");
+            CHLog(@"登陆失败 [用户云]: 状态信息(%@)",info.statusInfo);
             if (fail) {
                 fail(@"登陆用户云失败");
             }

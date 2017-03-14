@@ -7,8 +7,12 @@
 //
 
 #import "CHLoginViewController.h"
+
 #import "CHUserCloudManager.h"
+
 #import <MBProgressHUD.h>
+
+#import "CHHomeViewController.h"
 
 @interface CHLoginViewController ()
 
@@ -26,11 +30,17 @@
     // Dispose of any resources that can be recreated.
 }
 - (IBAction)login:(id)sender {
+
     [[CHUserCloudManager defaultUCManager] loginWithPhoneNum:@"15208260885" password:@"123456789." success:^(CHUserInfo *userInfo) {
-        
+        [self goHome];
     } fail:^(NSString *dialog) {
         
     }];
+}
+
+- (void) goHome {
+    CHHomeViewController *homeVc = [[CHHomeViewController alloc]initWithNibName:@"CHHomeViewController" bundle:nil];
+    [self.navigationController pushViewController:homeVc animated:YES];
 }
 
 /*
