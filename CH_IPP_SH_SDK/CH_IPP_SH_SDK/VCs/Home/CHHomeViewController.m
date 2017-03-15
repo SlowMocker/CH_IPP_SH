@@ -7,6 +7,9 @@
 //
 
 #import "CHHomeViewController.h"
+#import "CHUserCloudManager.h"
+
+#import "MBProgressHUD+ChEx.h"
 
 @interface CHHomeViewController ()
 
@@ -19,7 +22,10 @@
     // Do any additional setup after loading the view from its nib.
     self.navigationItem.title = @"Home";
     
+    [self initNavigationBar];
+    
 }
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
@@ -28,15 +34,22 @@
 
 - (void) initNavigationBar {
     UIBarButtonItem *leftBarButtonItem = [[UIBarButtonItem alloc]initWithTitle:@"" style:UIBarButtonItemStylePlain target:self action:@selector(back)];
-    leftBarButtonItem.image = [[UIImage imageNamed:@"back"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+    leftBarButtonItem.image = [[UIImage imageNamed:@"nav_back"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
     UIBarButtonItem *spaceL = [[UIBarButtonItem alloc]initWithBarButtonSystemItem:UIBarButtonSystemItemFixedSpace target:nil action:nil];
     spaceL.width = -10; // 向左缩进 10 个点
     self.navigationItem.leftBarButtonItems = @[spaceL , leftBarButtonItem];
 }
 
 - (void) back {
-    [self.navigationController popViewControllerAnimated:YES];
+    NSLog(@"back");
+    [[CHUserCloudManager defaultUCManager] logoutSuccess:^{
+        [self.navigationController popViewControllerAnimated:YES];
+    } fail:^(NSString *dialog) {
+        
+    }];
 }
+
+
 
 /*
 #pragma mark - Navigation

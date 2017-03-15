@@ -55,4 +55,22 @@ CH_SINGLETON_M(UCManager)
     }];
 }
 
+- (void) logoutSuccess:(void(^)())success fail:(void(^)(NSString *dialog))fail {
+    [CHUserCenter logoutWithComplete:^(CHUCResponseInfo *info) {
+        if (info.ok) {
+            CHLog(@"退出登陆成功 [用户云]");
+            if (success) {
+                success();
+            }
+            
+        } else {
+            CHLog(@"退出登陆失败 [用户云]: %@",info.statusInfo);
+            if (fail) {
+                fail(@"退出登陆失败");
+            }
+        }
+    }];
+
+}
+
 @end

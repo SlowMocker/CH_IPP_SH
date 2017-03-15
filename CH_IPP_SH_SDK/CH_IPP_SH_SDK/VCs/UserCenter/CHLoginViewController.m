@@ -10,7 +10,7 @@
 
 #import "CHUserCloudManager.h"
 
-#import <MBProgressHUD.h>
+#import "MBProgressHUD+ChEx.h"
 
 #import "CHHomeViewController.h"
 
@@ -23,6 +23,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
+    self.title = @"Login";
 }
 
 - (void)didReceiveMemoryWarning {
@@ -30,11 +31,13 @@
     // Dispose of any resources that can be recreated.
 }
 - (IBAction)login:(id)sender {
-
+    [MBProgressHUD chExShowMsg:@"登陆中" toVc:self];
     [[CHUserCloudManager defaultUCManager] loginWithPhoneNum:@"15208260885" password:@"123456789." success:^(CHUserInfo *userInfo) {
+        [MBProgressHUD chExHiddenHUDForVc:self];
         [self goHome];
     } fail:^(NSString *dialog) {
-        
+        [MBProgressHUD chExHiddenHUDForVc:self];
+        [MBProgressHUD chExShowTip:@"登陆失败" image:nil toVc:self];
     }];
 }
 
