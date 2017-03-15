@@ -7,6 +7,7 @@
 //
 
 #import "CHHomeViewController.h"
+
 #import "CHUserCloudManager.h"
 
 #import "MBProgressHUD+ChEx.h"
@@ -24,6 +25,13 @@
     
     [self initNavigationBar];
     
+    NSString *documentPath = [NSSearchPathForDirectoriesInDomains(NSDocumentationDirectory, NSUserDomainMask, YES) objectAtIndex:0];
+    
+    NSString *tempPath = NSTemporaryDirectory();
+    
+    NSString *libPath = [NSSearchPathForDirectoriesInDomains(NSLibraryDirectory, NSUserDomainMask, YES) objectAtIndex:0];
+    
+    NSLog(@"");
 }
 
 
@@ -42,10 +50,13 @@
 
 - (void) back {
     NSLog(@"back");
+    [MBProgressHUD chExShowMsg:@"退出中" toVc:nil];
     [[CHUserCloudManager defaultUCManager] logoutSuccess:^{
+        [MBProgressHUD chExHiddenHUDForVc:nil];
         [self.navigationController popViewControllerAnimated:YES];
     } fail:^(NSString *dialog) {
-        
+        [MBProgressHUD chExHiddenHUDForVc:nil];
+        [MBProgressHUD chExShowTip:@"退出失败" image:nil toVc:nil];
     }];
 }
 

@@ -25,6 +25,11 @@
 #define CH_STATUS_BAR_HEIGHT 20
 #define CH_NAVIGATION_BAR_HEIGHT 44
 
+// 沙盒路径
+#define CH_DOCUMENT_PATH [NSSearchPathForDirectoriesInDomains(NSDocumentationDirectory, NSUserDomainMask, YES) objectAtIndex:0]
+#define CH_TEMP_PATH NSTemporaryDirectory()
+#define CH_LIB_PATH [NSSearchPathForDirectoriesInDomains(NSLibraryDirectory, NSUserDomainMask, YES) objectAtIndex:0]
+
 // 系统版本 "4.0"
 // 因为转 CGFloat 有精度误差，所以如果想要支持 iOS 7 及以上，应该使用 CH_SYSTEM_VERSION > 6.x 来判断，而不应该使用 >=
 #define CH_SYSTEM_VERSION [[UIDevice currentDevice] systemVersion].floatValue

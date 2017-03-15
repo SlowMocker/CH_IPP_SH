@@ -14,7 +14,18 @@
         <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
             <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="3D9-pL-Z43">
+                    <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                </imageView>
+            </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="3D9-pL-Z43" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="4ce-Bd-NaB"/>
+                <constraint firstItem="3D9-pL-Z43" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="50l-ta-adP"/>
+                <constraint firstAttribute="trailing" secondItem="3D9-pL-Z43" secondAttribute="trailing" id="ALf-fJ-SOe"/>
+                <constraint firstAttribute="bottom" secondItem="3D9-pL-Z43" secondAttribute="bottom" id="St9-U5-diK"/>
+            </constraints>
         </view>
     </objects>
 </document>
