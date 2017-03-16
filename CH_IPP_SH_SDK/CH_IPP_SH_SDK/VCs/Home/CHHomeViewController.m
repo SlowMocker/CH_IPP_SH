@@ -43,7 +43,7 @@
 - (void) back {
     NSLog(@"back");
     [MBProgressHUD chExShowMsg:@"退出中" toVc:nil];
-    [[CHUserCloudManager defaultUCManager] logoutSuccess:^{
+    [[CHUserCloudManager defaultUCManager] remoteLogoutSuccess:^{
         [MBProgressHUD chExHiddenHUDForVc:nil];
         [self.navigationController popViewControllerAnimated:YES];
     } fail:^(NSString *dialog) {

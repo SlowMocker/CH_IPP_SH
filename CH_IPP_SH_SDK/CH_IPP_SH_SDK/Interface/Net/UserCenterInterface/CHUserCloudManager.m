@@ -16,7 +16,7 @@
 CH_SINGLETON_M(UCManager)
 
 
-- (void) loginWithPhoneNum:(NSString *)phone password:(NSString *)password success:(void(^)(CHUserInfo *userInfo))success fail:(void(^)(NSString *dialog))fail {
+- (void) remoteLoginWithPhoneNum:(NSString *)phone password:(NSString *)password success:(void(^)(CHUserInfo *userInfo))success fail:(void(^)(NSString *dialog))fail {
     [CHUserCenter loginWithUsername:phone password:password macAddress:nil deviceSn:nil complete:^(CHUCResponseInfo *info) {
         if (info.ok) { // login success
             CHLog(@"登陆成功 [用户云]");
@@ -55,7 +55,7 @@ CH_SINGLETON_M(UCManager)
     }];
 }
 
-- (void) logoutSuccess:(void(^)())success fail:(void(^)(NSString *dialog))fail {
+- (void) remoteLogoutSuccess:(void(^)())success fail:(void(^)(NSString *dialog))fail {
     [CHUserCenter logoutWithComplete:^(CHUCResponseInfo *info) {
         if (info.ok) {
             CHLog(@"退出登陆成功 [用户云]");

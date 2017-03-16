@@ -23,7 +23,7 @@ CH_SINGLETON_H(UCManager)
  *  @param success  成功回调
  *  @param fail     失败回调
  */
-- (void) loginWithPhoneNum:(NSString *)phone password:(NSString *)password success:(void(^)(CHUserInfo *userInfo))success fail:(void(^)(NSString *dialog))fail;
+- (void) remoteLoginWithPhoneNum:(NSString *)phone password:(NSString *)password success:(void(^)(CHUserInfo *userInfo))success fail:(void(^)(NSString *dialog))fail;
 
 /**
  *  退出长虹用户云
@@ -31,6 +31,6 @@ CH_SINGLETON_H(UCManager)
  *  @param success 成功回调
  *  @param fail    失败回调
  */
-- (void) logoutSuccess:(void(^)())success fail:(void(^)(NSString *dialog))fail;
+- (void) remoteLogoutSuccess:(void(^)())success fail:(void(^)(NSString *dialog))fail;
 
 @end

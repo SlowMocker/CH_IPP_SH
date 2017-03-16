@@ -32,7 +32,7 @@
 }
 - (IBAction)login:(id)sender {
     [MBProgressHUD chExShowMsg:@"登陆中" toVc:self];
-    [[CHUserCloudManager defaultUCManager] loginWithPhoneNum:@"15208260885" password:@"123456789." success:^(CHUserInfo *userInfo) {
+    [[CHUserCloudManager defaultUCManager] remoteLoginWithPhoneNum:@"15208260885" password:@"123456789." success:^(CHUserInfo *userInfo) {
         [MBProgressHUD chExHiddenHUDForVc:self];
         [self goHome];
     } fail:^(NSString *dialog) {
