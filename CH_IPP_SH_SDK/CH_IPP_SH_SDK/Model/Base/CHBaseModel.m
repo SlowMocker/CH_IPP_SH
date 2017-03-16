@@ -82,7 +82,7 @@
     return json;
 }
 
-- (NSArray *)getAllProperties:(Class)class {
+- (NSArray<NSString *> *)getAllProperties:(Class)class {
     NSMutableArray *properties = [NSMutableArray new];
     unsigned int count;
     objc_property_t *propertyList = class_copyPropertyList(class, &count);
@@ -95,38 +95,38 @@
     return [properties copy];
 }
 
-//#pragma mark
-//#pragma mark NSCodingProtocol
-//- (void)encodeWithCoder:(NSCoder *)aCoder {
-//    NSArray *properties = [self getAllProperties:[self class]];
-//    for (NSString *name in properties) {
-//        [aCoder encodeObject:[self valueForKey:name] forKey:[NSString stringWithFormat:@"c_%@_%@",NSStringFromClass([self class]),name]];
-//    }
-//}
-//
-//- (instancetype)initWithCoder:(NSCoder *)aDecoder {
-//    self = [super init];
-//    if (self) {
-//        NSArray *properties = [self getAllProperties:[self class]];
-//        for (NSString *name in properties) {
-//            [self setValue:[aDecoder decodeObjectForKey:[NSString stringWithFormat:@"c_%@_%@",NSStringFromClass([self class]),name]] forKey:name];
-//        }
-//    }
-//    return self;
-//}
-//#pragma mark
-//#pragma mark NSCopyingProtocol
-//- (instancetype)copyWithZone:(NSZone *)zone {
-//    CHBaseModel *new = [[[self class] allocWithZone:zone] init];
-//    if (new) {
-//        NSArray *arr = [self getAllProperties:[self class]];
-//        if ([arr count] != 0) {
-//            for (NSString *name in arr) {
-//                [new setValue:[self valueForKey:name] forKey:name];
-//            }
-//        }
-//    }
-//    return new;
-//}
+#pragma mark
+#pragma mark NSCodingProtocol
+- (void)encodeWithCoder:(NSCoder *)aCoder {
+    NSArray *properties = [self getAllProperties:[self class]];
+    for (NSString *name in properties) {
+        [aCoder encodeObject:[self valueForKey:name] forKey:[NSString stringWithFormat:@"c_%@_%@",NSStringFromClass([self class]),name]];
+    }
+}
+
+- (instancetype)initWithCoder:(NSCoder *)aDecoder {
+    self = [super init];
+    if (self) {
+        NSArray *properties = [self getAllProperties:[self class]];
+        for (NSString *name in properties) {
+            [self setValue:[aDecoder decodeObjectForKey:[NSString stringWithFormat:@"c_%@_%@",NSStringFromClass([self class]),name]] forKey:name];
+        }
+    }
+    return self;
+}
+#pragma mark
+#pragma mark NSCopyingProtocol
+- (instancetype)copyWithZone:(NSZone *)zone {
+    CHBaseModel *new = [[[self class] allocWithZone:zone] init];
+    if (new) {
+        NSArray *arr = [self getAllProperties:[self class]];
+        if ([arr count] != 0) {
+            for (NSString *name in arr) {
+                [new setValue:[self valueForKey:name] forKey:name];
+            }
+        }
+    }
+    return new;
+}
 
 @end

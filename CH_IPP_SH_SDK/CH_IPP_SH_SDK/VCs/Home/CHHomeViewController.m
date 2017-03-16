@@ -24,14 +24,6 @@
     self.navigationItem.title = @"Home";
     
     [self initNavigationBar];
-    
-    NSString *documentPath = [NSSearchPathForDirectoriesInDomains(NSDocumentationDirectory, NSUserDomainMask, YES) objectAtIndex:0];
-    
-    NSString *tempPath = NSTemporaryDirectory();
-    
-    NSString *libPath = [NSSearchPathForDirectoriesInDomains(NSLibraryDirectory, NSUserDomainMask, YES) objectAtIndex:0];
-    
-    NSLog(@"");
 }
 
 

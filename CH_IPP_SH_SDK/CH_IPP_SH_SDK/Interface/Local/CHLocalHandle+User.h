@@ -7,7 +7,13 @@
 //
 
 #import "CHLocalHandle.h"
+#import "CHUserInfo.h"
 
 @interface CHLocalHandle (User)
+
+- (void) localUpdateUserInfoWithNickname:(NSString *)nickname;
+- (void) localUpdateUserInfoWithPassword:(NSString *)password;
+- (void) localUpdateUserInfoWithIconPath:(NSString *)iconPath;
+- (void) localUpdateUserInfo:(CHUserInfo *)userInfo;
 
 @end

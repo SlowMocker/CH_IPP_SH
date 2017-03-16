@@ -6,8 +6,11 @@
 //  Copyright © 2017年 Wu. All rights reserved.
 //
 
-#import "CHDeviceInfo.h"
+#import "CHIPPDeviceInfo.h"
+@interface CHIPPDeviceInfo()
 
-@implementation CHDeviceInfo
+@end
+
+@implementation CHIPPDeviceInfo
 
 @end

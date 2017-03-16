@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 
 
-@interface CHBaseModel : NSObject/*<NSCoding , NSCopying>*/
+@interface CHBaseModel : NSObject<NSCoding , NSCopying>
 /**
  *  动态初始化对象
  *
@@ -39,7 +39,7 @@
  *
  *  @return 属性名称数组
  */
-- (NSArray *)getAllProperties:(Class)class;
+- (NSArray<NSString *> *)getAllProperties:(Class)class;
 
 
 @end

@@ -8,30 +8,30 @@
 
 #import "CHLocalHandle+User.h"
 #import "CHConst.h"
-#import "CHUserInfo.h"
+
 
 @implementation CHLocalHandle (User)
 
 // 修改用户相关信息之后，更新本地存储信息
-+ (void) localUpdateUserInfoWithNickname:(NSString *)nickname {
+- (void) localUpdateUserInfoWithNickname:(NSString *)nickname {
     if (nickname) {
         [CH_USERDEFAULT setValue:nickname forKey:kUserNickname];
     }
 }
 
-+ (void) localUpdateUserInfoWithPassword:(NSString *)password {
+- (void) localUpdateUserInfoWithPassword:(NSString *)password {
     if (password) {
         [CH_USERDEFAULT setValue:password forKey:kPassword];
     }
 }
 
-+ (void) localUpdateUserInfoWithIconPath:(NSString *)iconPath {
+- (void) localUpdateUserInfoWithIconPath:(NSString *)iconPath {
     if (iconPath) {
         [CH_USERDEFAULT setValue:iconPath forKey:kUserIconPath];
     }
 }
 
-+ (void) localUpdateUserInfo:(CHUserInfo *)userInfo {
+- (void) localUpdateUserInfo:(CHUserInfo *)userInfo {
     if (userInfo.iconPath) {
         [CH_USERDEFAULT setValue:userInfo.iconPath forKey:kUserIconPath];
     }
