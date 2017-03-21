@@ -7,9 +7,6 @@
 //
 
 
-
-
-
 // 本类
 #import "CHHomeViewController.h"
 // 数据类
@@ -47,7 +44,6 @@
         NSLog(@"%@",[dev toDictionary]);
     }
 }
-
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

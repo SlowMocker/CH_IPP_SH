@@ -55,7 +55,7 @@
         // 启动 IPP SDK
         [[IPPControl Instance] startWithResult:^(NSError * _Nullable error) {}];
         // 获取并重置本地存储的 IPP 设备
-        [[CHLocalDataHandle defaultLDataHandle] localDevice_resetIPPDevices:[[[CHDeviceCloudManager defaultDCManager] remoteGetAllIPPDevices] mutableCopy]];
+        [[CHLocalDataHandle defaultLDataHandle] localDevice_resetIPPDevices:[[CHDeviceCloudManager defaultDCManager] remoteGetAllIPPDevices]];
         
         [self goHome];
     } fail:^(NSString *dialog) {
