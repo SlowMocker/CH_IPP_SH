@@ -19,6 +19,9 @@ CHDeviceCloudManager :
 CHNetworkEngine :
 职责: 封装 AFNetworking 进行网络请求。提供各种网络请求模版，目前使用 POST
 
+CHLocalHandle :
+职责: 暴露存取本地数据接口
+
 ////////////////////////////////////////////////////////////////////////////////////
                                         数据模型
 ////////////////////////////////////////////////////////////////////////////////////
@@ -27,6 +30,9 @@ CHBaseModel :
 
 CHUserInfo :
 职责: 用户信息模型
+
+CHIPPDeviceInfo :
+职责: IPP 设备模型
 
 ////////////////////////////////////////////////////////////////////////////////////
                                         头文件
@@ -63,6 +69,21 @@ Category :
 
 UserCenter :
 职责: 登陆相关界面
+
+
+
+
+
+
+
+
+IPP SDK 配置:
+见 AppDelegate.m
+同时要实现 IPPControlDelegate(见 HomeVc)
+使用 http 请求，配置 info.plist 文件
+bitcode -> NO
+
+
 
 
 

@@ -6,13 +6,25 @@
 //  Copyright © 2017年 Wu. All rights reserved.
 //
 
+
+
+
+
+// 本类
 #import "CHHomeViewController.h"
-
+// 数据类
 #import "CHUserCloudManager.h"
-
+#import "CHLocalDataHandle+Device.h"
+// 依赖类
+#import "CHIPPDeviceInfo.h"
+// 扩展
 #import "MBProgressHUD+ChEx.h"
+// 三方库
+#import <IPP3/IPP3.h>
 
-@interface CHHomeViewController ()
+
+
+@interface CHHomeViewController ()<IPPControlDelegate>
 
 @end
 
@@ -24,6 +36,16 @@
     self.navigationItem.title = @"Home";
     
     [self initNavigationBar];
+    [IPPControl Instance].delegate = self;
+}
+
+- (void) viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
+    
+    NSArray<CHIPPDeviceInfo *> *ippDevices = [[CHLocalDataHandle defaultLDataHandle] localDevice_allIPPDevices];
+    for (CHIPPDeviceInfo *dev in ippDevices) {
+        NSLog(@"%@",[dev toDictionary]);
+    }
 }
 
 
@@ -51,6 +73,19 @@
         [MBProgressHUD chExShowTip:@"退出失败" image:nil toVc:nil];
     }];
 }
+
+#pragma mark
+#pragma mark delegate
+// IPPControlDelegate
+- (void) IppEvent:(IPPEvent *)event {
+    
+}
+
+
+#pragma mark
+#pragma mark private methods
+
+
 
 
 

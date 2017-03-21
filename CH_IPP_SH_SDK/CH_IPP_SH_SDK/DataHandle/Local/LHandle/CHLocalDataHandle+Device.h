@@ -6,30 +6,30 @@
 //  Copyright © 2017年 Wu. All rights reserved.
 //
 
-#import "CHLocalHandle.h"
+#import "CHLocalDataHandle.h"
 
 #import "CHIPPDeviceInfo.h"
 
-@interface CHLocalHandle (Device)
+@interface CHLocalDataHandle (Device)
 
 /**
- *  存储 IPP 设备
+ *  添加存储 IPP 设备
  *
  *  @param devics 设备数组
  */
-- (void) localStoreIPPDevices:(NSMutableArray<CHIPPDeviceInfo *> *)devics;
+- (void) localDevice_addIPPDevices:(NSArray<CHIPPDeviceInfo *> *)devices;
 
 /**
  *  获取本地存储的 IPP 设备数组
  *
  *  @return IPP 设备数组
  */
-- (NSMutableArray<CHIPPDeviceInfo *> *) localAllIPPDevices;
+- (NSArray<CHIPPDeviceInfo *> *) localDevice_allIPPDevices;
 
 /**
  *  清空本地存储的 IPP 设备
  */
-- (void) localClearIPPDevices;
+- (void) localDevice_clearIPPDevices;
 
 /**
  *  重置本地存储的 IPP 设备
@@ -38,6 +38,6 @@
  *
  *  @param devics 设备
  */
-- (void) localResetIPPDevices:(NSMutableArray<CHIPPDeviceInfo *> *)devics;
+- (void) localDevice_resetIPPDevices:(NSArray<CHIPPDeviceInfo *> *)devices;
 
 @end

@@ -29,9 +29,10 @@
  
  */
 
-// CHBaseModel 实现了 NSCoding 和 NSCoping 协议  CHDeviceInfo 继承了这些。
 
 #import "CHBaseModel.h"
+
+// CHIPPDeviceInfo 包含了 IPPDeviceModel 的所有属性
 
 @interface CHIPPDeviceInfo : CHBaseModel
 // 设备id
@@ -48,8 +49,13 @@
 @property(nonatomic , copy)NSString *sharefrom;
 // 该设备分享给的用户
 @property(nonatomic , copy)NSString *shareto;
+// 该设备分享给的用户 id 数组。其实就是对 shareto 属性的拆分
+@property (nonatomic , strong) NSArray<NSString *> *shareToIds;
 // 设备是否绑定
-@property(assign, nonatomic)BOOL bind;
+// 这个属性只是用来区分设备是否已经被绑定和没绑定。如果 A 分享一个设备（由 A 绑定）给 B，那么 B 获取到的设备中该属性依旧是 YES。
+@property(assign, nonatomic)BOOL isBinded;
+// 判断该设备是否是自己绑定
+@property (nonatomic , assign) BOOL isSelfBinded;
 // 设备条码
 @property(nonatomic , copy)NSString *sn;
 // 设备类型id
@@ -68,9 +74,12 @@
 @property(nonatomic , assign)int online;
 
 @property(nonatomic , copy)NSString *memo;
-// 设备连接类型，IPPDeviceConnectType枚举值
-@property(nonatomic , assign)int connectType;
 
+// 设备连接类型，IPPDeviceConnectType枚举值
+// 0 远程
+// 1 本地 （还未绑定，待商讨）
+// 这个属性和 isBinded 有重合
+@property(nonatomic , assign)int connectType;
 
 
 @end

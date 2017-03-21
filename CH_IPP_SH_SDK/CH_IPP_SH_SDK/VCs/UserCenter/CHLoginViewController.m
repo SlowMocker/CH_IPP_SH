@@ -9,6 +9,11 @@
 #import "CHLoginViewController.h"
 
 #import "CHUserCloudManager.h"
+#import "CHDeviceCloudManager.h"
+#import "CHLocalDataHandle+Device.h"
+#import "CHLocalDataHandle+User.h"
+
+#import <IPP3/IPP3.h>
 
 #import "MBProgressHUD+ChEx.h"
 
@@ -31,9 +36,27 @@
     // Dispose of any resources that can be recreated.
 }
 - (IBAction)login:(id)sender {
+    // 张洪利账号
+    // 15882312746
+    // 12345678.
+    
+    // 刘玉梅账号
+    // 15208260885
+    // 123456789.
+    
     [MBProgressHUD chExShowMsg:@"登陆中" toVc:self];
-    [[CHUserCloudManager defaultUCManager] remoteLoginWithPhoneNum:@"15208260885" password:@"123456789." success:^(CHUserInfo *userInfo) {
+    [[CHUserCloudManager defaultUCManager] remoteLoginWithPhoneNum:@"15882312746" password:@"12345678." success:^(CHUserInfo *userInfo) {
         [MBProgressHUD chExHiddenHUDForVc:self];
+        
+        [[CHLocalDataHandle defaultLDataHandle] localUser_updateUserInfo:userInfo];
+        
+        [IPPSDKConfiger Instance].userToken = userInfo.token;
+        [IPPSDKConfiger Instance].userKey = userInfo.phoneNum;
+        // 启动 IPP SDK
+        [[IPPControl Instance] startWithResult:^(NSError * _Nullable error) {}];
+        // 获取并重置本地存储的 IPP 设备
+        [[CHLocalDataHandle defaultLDataHandle] localDevice_resetIPPDevices:[[[CHDeviceCloudManager defaultDCManager] remoteGetAllIPPDevices] mutableCopy]];
+        
         [self goHome];
     } fail:^(NSString *dialog) {
         [MBProgressHUD chExHiddenHUDForVc:self];
